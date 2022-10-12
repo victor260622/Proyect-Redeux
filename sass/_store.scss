@@ -1,0 +1,116 @@
+/* INICIO DE LA PRIMERA SECCION */
+
+.store__container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+}
+.store__cardsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px 40px 24px;
+    row-gap: 32px;
+        h3{
+            background: linear-gradient(100deg, rgba(30,167,164,1) 4%, rgba(85,121,226,1) 70%, rgba(116,79,210,1) 100%);
+            border-radius: 12px;
+            color: white;
+            padding: 20px; 
+        }
+}
+
+.store__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    padding: 18px;
+    width: 100%;
+        img{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: gray;
+        }
+    
+}   
+
+.card__description{
+    margin-top: 20px;    
+    padding: 40px;
+    text-align: left;
+        li{
+            color: #b7b1b1; 
+        }
+}
+
+.card__price{
+    font-size: 30px;
+    padding: 20px;
+    font-weight: 600;
+}
+.card__buyButton{
+    transition: background-color .5s;
+    font-size: 24px;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(203 67 67 / 90%);
+    }
+}
+
+@media (min-width: 700px){
+    .store__cardsContainer{
+        padding: 40px 30px 40px 30px;
+    }
+    .store__card{
+        padding: 32px;
+    }
+}
+@media (min-width: 1024px){
+    .store__cardsContainer{
+        flex-direction: row;
+        column-gap: 20px;
+            h3{
+                padding: 15px;
+            }
+    }
+
+    .store__card{
+        width: 33.3%;
+    }
+    .card__description{
+        padding: 28px;
+            li{
+                margin-bottom: 12px;
+                font-size: 18px;
+            }
+    }
+
+}
+@media (min-width: 1200px){
+    .store__cardsContainer{
+        column-gap: 40px;
+            h3{
+                padding: 20px; 
+            }
+    }
+
+    .card__description{
+        padding: 32px;
+            li{
+                font-size: 20px;
+                color: #b7b1b1;
+            }
+    }
+
+}
+/* FIN DE LA PRIMERA SECCION */

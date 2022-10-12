@@ -1,0 +1,65 @@
+   /* VISTA PARA CONTACT */
+form{
+    border-radius: 18px;
+    border: 1px solid #c3c3c3;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    box-shadow: 22px 16px 30px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 22px 16px 30px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 22px 16px 30px -10px rgba(0,0,0,0.75);
+}
+.findUs__container{
+    margin-top: 50px;
+    align-self: center;
+    img{
+        margin-top: 30px;
+        width: 330px;
+        height: 250px;
+    }
+}
+.main__sections--container{
+    padding: 100px 18px 100px 18px;
+    flex-direction: column;
+    column-gap: 150px;
+}
+@media (min-width: 600px) {
+    .findUs__container{
+        margin-top: 60px;
+        img{
+            margin-top: 30px;
+            width: 500px;
+            height: 350px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .main__sections--container{
+        padding: 100px 50px 100px 50px;
+        flex-direction: row;
+    }
+    .findUs__container{
+        margin-top: 0px;
+        align-self: flex-start;
+        img{
+            margin-top: 30px;
+            width: 380px;
+            height: 350px;
+        }
+    }
+}
+@media (min-width: 1200px){
+    .findUs__container{
+        img{
+            margin-top: 30px;
+            width: 500px;
+            height: 350px;
+        }
+    }
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

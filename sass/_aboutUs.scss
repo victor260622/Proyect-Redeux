@@ -1,0 +1,101 @@
+/* ESTILOS PARA LA PRIMERA SECCION */
+.aboutUs__title{
+    margin-top: 35px;
+}
+.firstSection__container--aboutUS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;    
+    padding: 40px 50px 40px 50px;
+    margin: 40px 0px 0px 0px;
+        img{
+            border-radius: 8px;
+            max-width: 300px;
+            max-height: 300px;
+        }
+        p{
+            padding: 20px;
+        }
+}
+
+@media (min-width: 670px){
+
+    .firstSection__container--aboutUS img{
+        max-width: 500px;
+        max-height: 300px;
+    }
+}
+@media (min-width: 1024px){
+    .firstSection__container--aboutUS{
+        flex-direction: row;
+        column-gap: 80px;
+    }
+    .firstSection__container--aboutUS img{
+        border-radius: 8px;
+        max-width: 400px;
+        max-height: 300px;
+    }
+}
+@media (min-width: 1200px){
+    .firstSection__container--aboutUS{
+        column-gap: 150px;
+    }
+    .firstSection__container--aboutUS img{
+        border-radius: 8px;
+        max-width: 600px;
+        max-height: 300px;
+    }
+}
+/* FIN ESTILOS PARA LA PRIMERA SECCION */
+
+/* ESTILOS PARA LA SEGUNDA SECCION */
+.secondSection__container--aboutUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    column-gap: 150px;
+    padding: 40px 50px 40px 50px;
+    margin: 0px 0px 40px 0px;
+        img{
+            border-radius: 8px;
+            max-width: 300px;
+            max-height: 300px;
+        }
+        p{
+            padding: 20px;
+        }
+}
+
+@media (min-width: 670px){
+
+    .secondSection__container--aboutUs img{
+        max-width: 500px;
+        max-height: 300px;
+    }
+}
+@media (min-width: 1024px){
+    .secondSection__container--aboutUs{
+        flex-direction: row-reverse;
+        column-gap: 80px;
+        img{
+            border-radius: 8px;
+            max-width: 400px;
+            max-height: 300px;
+        }
+    }
+
+}
+@media (min-width: 1200px){
+    .secondSection__container--aboutUs{
+        column-gap: 150px;
+        img{
+            border-radius: 8px;
+            max-width: 600px;
+            max-height: 300px;
+        }
+    }
+
+}
+/* FIN ESTILOS PARA LA SEGUNDA SECCION */
