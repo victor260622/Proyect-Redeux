@@ -14,16 +14,17 @@ p {
 }
 
 h1 {
-  font-size: 38px !important;
+  font-size: 38px;
   font-weight: 500px;
 }
 
 h2 {
-  font-size: 30px !important;
-  margin-bottom: 24px !important;
+  font-size: 30px;
+  margin-bottom: 24px;
   font-weight: 500px;
 }
 
+/* NOTA: BOOTSTRAP ESTA IMPIDIENTO QUE A LAS ETIQUETAS A NO LES PUEDA QUITAR EL SUBRAYADO SIN EL !IMPORTANT  */
 a {
   color: white;
   display: flex;
@@ -32,22 +33,29 @@ a {
   text-decoration: none !important;
 }
 
+.shadow {
+  box-shadow: 22px 16px 30px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 22px 16px 30px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 22px 16px 30px -10px rgba(0, 0, 0, 0.75);
+}
+
 .header__container {
   background-color: #213b66;
   height: 60px;
 }
 .header__container .navBar__show {
   max-width: 1440px;
-  padding: 0px !important;
+  z-index: 50;
 }
 .header__container .navBar__show .nav__section {
   justify-content: flex-end;
   background-color: #213b66;
 }
 .header__container .navBar__show .navbar-toggler-icon {
-  background-image: url(../img/list.svg) !important;
+  background-image: url(../img/list.svg);
 }
 
+/* NOTA: BOOTSTRAP NO ME ESTA PERMITIENDO CAMBIAR LOS COLORES DE LAS LETRAS DENTRO DEL NAV SIN EL !IMPORTAT AL IGUAL QUE EL HOVER */
 .nav-item {
   padding: 14px;
 }
@@ -70,7 +78,7 @@ a {
     padding-right: 30px;
   }
   .navBar__show {
-    padding: 12px !important;
+    padding: 12px;
   }
   .nav-item {
     padding: 0px;
@@ -153,7 +161,7 @@ a {
   margin-top: 25px;
   background-color: red;
   transition: background-color 0.5s;
-  color: white !important;
+  color: white;
   padding: 12px;
   border-radius: 14px;
   max-width: 120px;
@@ -186,7 +194,7 @@ a {
 .cards__container .card {
   border: 1px solid #c3c3c3;
   text-align: center;
-  border-radius: 18px !important;
+  border-radius: 18px;
 }
 .cards__container .card .card__tittle {
   padding-bottom: 0px;
@@ -383,18 +391,52 @@ footer {
 }
 
 .store__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid;
-  padding: 18px;
   width: 100%;
+  float: left;
 }
 .store__card img {
   width: 200px;
   height: 200px;
   margin: 20px;
   background-color: gray;
+}
+
+.store__card-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.store__card-inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  box-sizing: border-box;
+  height: 0;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+  transition: all 0.8s ease;
+}
+.store__card-inner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  box-sizing: border-box;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
+  transition: all 0.8s ease;
+}
+
+.store__card:hover .store__card-inner::after,
+.store__card:hover .store__card-inner::before {
+  border-color: red;
+  width: 100%;
+  height: 100%;
 }
 
 .card__description {
@@ -432,7 +474,7 @@ footer {
     padding: 40px 30px 40px 30px;
   }
   .store__card {
-    padding: 32px;
+    padding: 24px;
   }
 }
 @media (min-width: 1024px) {
@@ -443,6 +485,8 @@ footer {
   }
   .store__cardsContainer h3 {
     padding: 15px;
+    flex-flow: column;
+    flex-direction: vertical;
   }
   .store__card {
     width: 33.3%;
@@ -456,6 +500,9 @@ footer {
   }
 }
 @media (min-width: 1200px) {
+  .store__card-inner {
+    padding: 24px;
+  }
   .store__cardsContainer {
     -moz-column-gap: 40px;
          column-gap: 40px;
@@ -531,13 +578,18 @@ footer {
 
 .costumers__container {
   border-top: 0;
+  margin-top: 24px;
+}
+
+.cards__container {
+  margin-top: 24px;
 }
 
 .costumers__card-image {
   align-self: center;
   margin-top: 20px;
   width: 200px;
-  height: 150px !important;
+  height: 150px;
   border-radius: 8px;
 }
 

@@ -11,18 +11,24 @@ p{
     margin: 0px;
 }
 h1{
-    font-size: 38px !important;
+    font-size: 38px;
     font-weight: 500px;
 }
 h2{
-    font-size: 30px !important;
-    margin-bottom: 24px !important;
+    font-size: 30px;
+    margin-bottom: 24px;
     font-weight: 500px;
 }
+/* NOTA: BOOTSTRAP ESTA IMPIDIENTO QUE A LAS ETIQUETAS A NO LES PUEDA QUITAR EL SUBRAYADO SIN EL !IMPORTANT  */
 a{
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-decoration: none !important;
+}
+.shadow{
+    box-shadow: 22px 16px 30px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 22px 16px 30px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 22px 16px 30px -10px rgba(0,0,0,0.75);
 }

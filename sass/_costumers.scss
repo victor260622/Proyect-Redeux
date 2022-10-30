@@ -1,4 +1,6 @@
+    @import "vars";
     /* VISTA PARA COSTUMERS */
+
     .costumer__section--container{
         border: 1px solid;
         margin: 50px;
@@ -7,7 +9,7 @@
         display: flex;
         flex-direction: row;
         align-items: start;
-        max-width: 1440px;
+        max-width: $maxWidthSize;
         column-gap: 50px;
         padding: 80px;
         margin: 50px;
@@ -38,7 +40,7 @@
 
     .accordion__container{
         margin-top: 50px;
-        max-width: 1440px;
+        max-width: $maxWidthSize;
         width: 100%;
         padding: 0 50px 0 50px;
     }
@@ -54,11 +56,15 @@
     }
     .costumers__container{
         border-top: 0;
+        margin-top: 24px;
+    }
+    .cards__container{
+        margin-top: 24px;
     }
     .costumers__card-image{
             align-self: center;
             margin-top: 20px;
             width: 200px;
-            height: 150px !important;
+            height: 150px;
             border-radius: 8px;
     }

@@ -1,3 +1,4 @@
+@import "vars";
    /* VISTA PARA CONTACT */
 form{
     border-radius: 18px;
@@ -34,7 +35,7 @@ form{
         }
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: $mediumScreenSize) {
     .main__sections--container{
         padding: 100px 50px 100px 50px;
         flex-direction: row;
@@ -49,7 +50,7 @@ form{
         }
     }
 }
-@media (min-width: 1200px){
+@media (min-width: $maxScreenSize){
     .findUs__container{
         img{
             margin-top: 30px;
